@@ -1,0 +1,16 @@
+<h1>{{sportCtrl.sport.name}} Gold Medals</h1>
+<table class="table">
+  <thead>
+    <th>Year</th>
+    <th>Division</th>
+    <th>Country</th>
+  </thead>
+  <tbody>
+    <tr ng-repeat="medals in sportCtrl.sport.goldMedals">
+      <td>{{medals.year}}</td>
+      <td>{{medals.division}}</td>
+      <td>{{medals.country}}</td>
+    </tr>
+  </tbody>
+</table>
+<a class="btn" ui-sref="sports.new({sportName: sportCtrl.sport.name})">New Medal</a>
