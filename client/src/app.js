@@ -1,3 +1,4 @@
+'use strict';
 import angular from 'angular';
 import 'angular-ui-router';
 angular.module('olympics',['ui.router'])
@@ -20,7 +21,6 @@ angular.module('olympics',['ui.router'])
               let pathRegexp = /sports\/(\w+)/;
               let match = pathRegexp.exec($location.path());
 
-              console.log('hi')
               if(match === null || match.length === 0) return false;
               let selectedSportName = match[1];
               console.log('below', selectedSportName, sport)
