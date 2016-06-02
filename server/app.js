@@ -24,7 +24,6 @@ app.get("/sports", (request, response) => {
 app.get('/sports/:name', (request, response) => {
   let sportName = request.params.name;
   let sports = mongoUtil.sports();
-  console.log(sportName);
   sports.find({name: sportName}).limit(1).next((err, doc) => {
     if(err){
       response.sendStatus(400)
